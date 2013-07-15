@@ -1,0 +1,3 @@
+[submodule "foreman-installer"]
+	path = foreman-installer
+	url = https://github.com/gwdg/foreman-installer.git
