@@ -21,10 +21,10 @@ Vagrant.configure("2") do |config|
         end
 
         # Management network
-        vm_config.vm.network :private_network, ip: "10.1.1.2",      netmask: "255.255.0.0"
+        vm_config.vm.network :private_network, ip: "10.1.1.2",      netmask: "255.255.255.0"
 
         # Provisioning network
-        vm_config.vm.network :private_network, ip: "10.1.255.254",  netmask: "255.255.0.0"
+        vm_config.vm.network :private_network, ip: "10.1.254.254",  netmask: "255.255.255.0"
 
         vm_config.vm.network :forwarded_port, guest: 80, host: 8080
         vm_config.vm.network :forwarded_port, guest: 443, host: 8443
