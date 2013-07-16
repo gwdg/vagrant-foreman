@@ -46,7 +46,7 @@ Vagrant.configure("2") do |config|
 
             # put primary network interface into hostonly network segement
             vb.customize ["modifyvm", :id, "--nic1", "hostonly"]
-            vb.customize ["modifyvm", :id, "--hostonlyadapter1", "vboxnet0"]
+            vb.customize ["modifyvm", :id, "--hostonlyadapter1", "vboxnet2"]
 
             # pxe boot the node
             vb.customize ["modifyvm", :id, "--boot1", "net"]
